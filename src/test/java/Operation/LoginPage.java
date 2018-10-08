@@ -12,13 +12,13 @@ public class LoginPage {
   Properties p;
 	WebDriver driver;
 	
-	@FindBy(id ="userName")
+	@FindBy(name = "Username")
 	WebElement Username;
 	
-	@FindBy(id ="password")
+	@FindBy(id ="txtPassword")
 	WebElement Password;
 	
-	@FindBy(css = ".btn.btn-login")
+	@FindBy(id = "btnLogin")
 	WebElement LoginButton;
 	
 	@FindBy(id = "logoff")
@@ -31,10 +31,6 @@ public class LoginPage {
 	}
 	
 	
-	public void ClickLogOffButton()
-	{
-		LogOffButton.click();
-	}
 	
 	public void LogintoApplication(String strUsername,String strPassword)
 	{

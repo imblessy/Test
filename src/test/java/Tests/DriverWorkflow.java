@@ -33,13 +33,13 @@ public class DriverWorkflow {
   @BeforeTest	
   public void setUp() {
 
-	  System.setProperty("webdriver.chrome.driver", "D:/Softwares1/Softwares/chromedriver/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "D:/Softwares1/Softwares/ChromeDriver2/chromedriver.exe");
 	  
 	  driver = new ChromeDriver();
 
       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-      driver.get("http://192.168.1.211:19090/#/login");
+      driver.get("http://192.168.1.211:4568");
       driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
   }
 
@@ -50,7 +50,7 @@ public class DriverWorkflow {
 	  objLogin =  new LoginPage(driver);
 
 	  objLogin.LogintoApplication( LoginUsername, LoginPassword);
-	  objLogin.ClickLogOffButton();
+	  
   }
   @AfterTest
   public void afterTest() {
